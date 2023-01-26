@@ -1,3 +1,5 @@
+import snarkdown from './snarkdown';
+
 // Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByTagName("LI");
 var i;
@@ -32,7 +34,10 @@ function newElement() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("myInput").value;
   var t = document.createTextNode(inputValue);
-  li.appendChild(t);
+
+  let markdownText = snarkdown(t);
+
+  li.appendChild(markdownText);
   if (inputValue === '') {
     alert("You must write something!");
   } else {
