@@ -4,16 +4,12 @@ if (!keyList) {
   keyList = JSON.parse(localStorage.getItem('keyList'));
 }
 
-var nodeArr = [];
-
 for (let i = 0; i < keyList.length; i++) {
   var node = document.createElement('li');
   node.innerHTML = JSON.parse(localStorage.getItem(keyList[i]));
-  nodeArr.push(node);
-
+  
+  AddButtons(node);
   document.getElementById("myUL").appendChild(node);
-
-  AddCloseButton(node);
 }
 
 // Create a "close" button and append it to each list item
@@ -68,15 +64,28 @@ function newElement() {
   }
   document.getElementById("myInput").value = "";
 
-  AddCloseButton(li);
+  AddButtons(li);
 }
 
-function AddCloseButton(li) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
+function AddButtons(li) {
+  var spanClose = document.createElement("SPAN");
+  var spanEdit = document.createElement("SPAN");
+  var closeTxt = document.createTextNode("\u00D7");
+  var editTxt = document.createTextNode("\u21BB");
+
+  spanClose.className = "edit";
+  spanClose.appendChild(editTxt);
+  li.appendChild(spanClose);
+
+  var edit = document.getElementsByClassName("edit");
+
+  for (i = 0; i < edit.length; i++) {
+    
+  }
+  
+  spanEdit.className = "close";
+  spanEdit.appendChild(closeTxt);
+  li.appendChild(spanEdit);
 
   var close = document.getElementsByClassName("close");
 
@@ -84,6 +93,9 @@ function AddCloseButton(li) {
     close[i].onclick = function() {
       var div = this.parentElement;
       div.style.display = "none";
+
+      keyList.splice(i,1);
+      localStorage.setItem('keyList', JSON.stringify(keyList));
     }
   }
 }
