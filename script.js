@@ -73,8 +73,9 @@ function AddButtons(li, index) {
   var spanClose = document.createElement("SPAN");
   var spanEdit = document.createElement("SPAN");
   var closeTxt = document.createTextNode("\u00D7");
-  var editTxt = document.createTextNode("\u21BB");
+  var editTxt = document.createTextNode("↩");
 
+  spanClose.title = "Delete";
   spanClose.className = "close";
   spanClose.appendChild(closeTxt);
   li.appendChild(spanClose);
@@ -88,6 +89,7 @@ function AddButtons(li, index) {
     localStorage.removeItem(id);
   }
   
+  spanEdit.title = "Edit";
   spanEdit.className = "edit";
   spanEdit.appendChild(editTxt);
   li.appendChild(spanEdit);
