@@ -38,6 +38,10 @@
     background: hsl(223, 9%, 30%);
     color: white;
   }
+
+  body{
+    background: hsl(223, 9%, 18%);
+  }
   
   /* Style the close button */
   .close {
@@ -96,6 +100,7 @@
   
   /* Style the "Add" button */
   .addBtn {
+    margin-top: 10px;
     padding: 10px;
     width: 25%;
     background: #73bb57;
@@ -117,7 +122,7 @@
     border: none;
     border-radius: 0;
     width: 100%;
-    /* height: 500px; */
+    height: 15em;
     padding: 10px;
     float: left;
     font-size: 16px;

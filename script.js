@@ -53,15 +53,15 @@ function newElement() {
   var t = document.createElement("div");
   t.innerHTML = markdownHTML;
 
-  var newId = keyList[keyList?.length - 1] + 1 || 0;
-  keyList.push(newId);
-  localStorage.setItem('keyList', JSON.stringify(keyList));
-  localStorage.setItem(newId, JSON.stringify(inputValue));
-
   li.appendChild(t);
   if (inputValue === '') {
     alert("You must write something!");
   } else {
+    var newId = keyList[keyList?.length - 1] + 1 || 0;
+    keyList.push(newId);
+    localStorage.setItem('keyList', JSON.stringify(keyList));
+    localStorage.setItem(newId, JSON.stringify(inputValue));
+
     document.getElementById("myUL").appendChild(li);
   }
   document.getElementById("myInput").value = "";
