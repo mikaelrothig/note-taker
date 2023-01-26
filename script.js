@@ -27,9 +27,12 @@ list.addEventListener('click', function(ev) {
   }
 }, false);
 
-import snarkdown from './snarkdown';
+
 
 // Create a new list item when clicking on the "Add" button
+
+import snarkdown from './snarkdown';
+
 function newElement() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("myInput").value;
