@@ -1,5 +1,3 @@
-import snarkdown from './snarkdown';
-
 // Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByTagName("LI");
 var i;
@@ -29,13 +27,15 @@ list.addEventListener('click', function(ev) {
   }
 }, false);
 
+import snarkdown from './snarkdown';
+
 // Create a new list item when clicking on the "Add" button
 function newElement() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("myInput").value;
-  var t = document.createTextNode(inputValue);
+  // var t = document.createTextNode(inputValue);
 
-  let markdownText = snarkdown(t);
+  let markdownText = snarkdown(inputValue);
 
   li.appendChild(markdownText);
   if (inputValue === '') {
