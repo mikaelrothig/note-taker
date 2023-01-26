@@ -1,6 +1,7 @@
 /* Include the padding and border in an element's total width and height */
 * {
     box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
   
   /* Remove margins and padding from the list */
@@ -14,7 +15,8 @@
     cursor: pointer;
     position: relative;
     padding: 12px 8px 12px 40px;
-    background: #eee;
+    background: hsl(223, 9%, 25%);
+    color: white;
     font-size: 18px;
     transition: 0.2s;
   
@@ -27,43 +29,48 @@
   
   /* Set all odd list items to a different color (zebra-stripes) */
   ul li:nth-child(odd) {
-    background: #f9f9f9;
+    background: hsl(223, 9%, 20%);
+    color: white;
   }
   
   /* Darker background-color on hover */
   ul li:hover {
-    background: #ddd;
+    background: hsl(223, 9%, 30%);
+    color: white;
   }
   
   /* Style the close button */
   .close {
     position: absolute;
+    width: 50px;
+    text-align: center;
     right: 0;
     top: 0;
     padding: 12px 16px 12px 16px;
   }
   
   .close:hover {
-    background-color: hsl(337, 65%, 31%);
+    background-color: hsl(337, 76%, 44%);
     color: white;
   }
 
   /* Style the edit button */
   .edit {
     position: absolute;
-    right: 40px;
+    right: 50px;
+    text-align: center;
     top: 0;
     padding: 12px 16px 12px 16px;
   }
   
   .edit:hover {
-    background-color: hsl(56, 70%, 41%);
+    background-color: hsl(49, 83%, 45%);
     color: white;
   }
   
   /* Style the header */
   .header {
-    background-color: hsl(225, 4%, 18%);
+    background-color: hsl(223, 9%, 15%);
     padding: 30px 40px;
     color: white;
     text-align: center;
@@ -91,7 +98,7 @@
   .addBtn {
     padding: 10px;
     width: 25%;
-    background: #d9d9d9;
+    background: #73bb57;
     color: #555;
     float: left;
     text-align: center;
@@ -102,7 +109,7 @@
   }
   
   .addBtn:hover {
-    background-color: #bbb;
+    background-color: #4ab81f;
   }
 
   textarea {
@@ -114,4 +121,6 @@
     padding: 10px;
     float: left;
     font-size: 16px;
+    background-color: hsl(223, 9%, 20%);
+    color: white;
   }
