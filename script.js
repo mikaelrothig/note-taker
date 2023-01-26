@@ -1,3 +1,10 @@
+import snarkdown from 'https://github.com/developit/snarkdown.git';
+
+let md = '_this_ is **easy** to `use`.';
+let html = snarkdown(md);
+console.log(html);
+// <em>this</em> is <strong>easy</strong> to <code>use</code>.
+
 // Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByTagName("LI");
 var i;
