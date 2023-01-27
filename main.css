@@ -134,3 +134,9 @@
     background-color: hsl(223, 9%, 20%);
     color: white;
   }
+
+  br {
+    content: "";
+    display: block;
+    height: 0.5em;
+}
