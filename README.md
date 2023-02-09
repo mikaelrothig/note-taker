@@ -7,7 +7,7 @@ Notes can be written using markdown and are rendered correctly once the note is 
 
 *Below is how you can view the web app online or download and run it locally.*
 
-* To view it online go to https://mikaelrothig.github.io
+* To view it online go to https://mikaelrothig.github.io/NoteTaker/
 
 * To run it locally;
   * Clone the repository.
