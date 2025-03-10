@@ -2,13 +2,13 @@
 
 This is a simple note taking app that was created for a job interview that allows the user to create, view, edit and delete notes. 
 Notes can be written using markdown and are rendered correctly once the note is created. Due to time constraints the notes are cached on the users device. 
+ 
+## 🛠 Installation & Set Up
 
-## Installation
+1. Clone repository
 
-*Below is how you can view the web app online or download and run it locally.*
+   ```sh
+   git clone
+   ```
 
-* To view it online go to https://mikaelrothig.github.io/NoteTaker/
-
-* To run it locally;
-  * Clone the repository.
-  * Open the index.html file in a browser of your choice.
+2. Open `index.html` in the browser
